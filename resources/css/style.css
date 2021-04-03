@@ -1,0 +1,452 @@
+/*-------------------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:focus{outline: none;}
+html{
+    background-color: var(--whitetext);
+    color: var(--greytext);
+    font-family: 'Lato','Arial',sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+/*-------------------------------------------------*/
+/* END OF BASIC SETUP */
+/*-------------------------------------------------*/
+
+
+/*-------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-------------------------------------------------*/
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+section{
+    padding: 5rem 0;
+}
+.box{
+    padding: 1%;
+}
+:root{
+    --primary-colour: #2ecc71;
+    --secondary-colour: #27ae60;
+    --whitetext:#ffffff;
+    --whitealternative:#f4f4f4;
+    --greytext:#555555;
+    --ashtext:#888;
+    --blacktext:#000;
+}
+
+/* BUTTONS */
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 0.625rem  1.875rem;
+    font-weight: 300;
+    border-radius: 12.5rem;
+    text-decoration: none;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    color: var(--whitetext);
+    background-color: var(--primary-colour);
+    border: 1px solid var(--primary-colour);
+    margin-right: 0.9375rem;
+    transition: background-color 0.5s,border 0.5s, color 0.5s;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    color: var(--primary-colour);
+    border: 1px solid var(--secondary-colour);
+}
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    border: 1px solid var(--secondary-colour);
+    background-color: var(--secondary-colour);
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid var(--secondary-colour);
+    background-color: var(--secondary-colour);
+    color: var(--whitetext);
+}
+
+
+/* ICONS */
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: var(--primary-colour);
+    margin-bottom: 0.625rem;
+}
+.icon-small{
+    display: inline-block;
+    width: 1.875rem;
+    text-align: center;
+    color: var(--primary-colour);
+    font-size: 120%;
+    vertical-align: middle;
+    margin-top: -0.25rem;
+}
+
+/* HEADINGS */
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h1{
+    margin:0;
+    margin-bottom:1.25rem;
+    color: var(--whitetext);
+    font-size: 240%;
+    word-spacing: 0.25rem;
+    letter-spacing: 0.0625rem;
+}
+h2{
+    font-size: 180%;
+    word-spacing: 0.125rem;
+    text-align: center;
+    margin-bottom: 1.875rem;
+    letter-spacing: 0.0625rem;
+}
+h2:after{
+    display: block;
+    height: 0.125rem;
+    background-color: var(--primary-colour);
+    content: " ";
+    width: 6.25rem;
+    margin: 0 auto;
+    margin-top: 1.875rem;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 0.9375rem;
+}
+
+/* PARAGRAPHS */
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* LINKS */
+a:link,
+a:visited{
+    color: var(--primary-colour);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-colour);
+    padding-bottom: 0.0625rem;
+    transition: border-bottom 0.2s color 0.2s;
+}
+a:hover,
+a:active{
+    color: var(--greytext);
+    border-bottom: 1px solid transparent;
+}
+
+/*-------------------------------------------------*/
+/* END OF REUSABLE COMPONENTS */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* HEADER */
+/*-------------------------------------------------*/
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../css/img/donovan-sikaona-pOVVgdfUz8g-unsplash.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero-text-box{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.logo{
+    height: 12.25rem;
+    width: auto;
+    float: left;
+    margin-top: -1.5rem;
+    margin-left: -5rem;
+    color: var(--whitetext);
+}
+.main-nav{
+    list-style: none;
+    float: right;
+    margin-top: 3.4375rem;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: var(--whitetext);
+    text-decoration: none;
+    font-size: 90%;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+    padding: 0.5rem 0;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid  var(--primary-colour);
+}
+
+
+/*-------------------------------------------------*/
+/* END OF HEADER */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* SECTION FEATURES */
+/*-------------------------------------------------*/
+.section-features .long-copy{
+    margin-bottom: 1.875rem;
+}
+
+/*-------------------------------------------------*/
+/* END OF SECTION FEATURES*/
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* SECTION MEALS */
+/*-------------------------------------------------*/
+.section-meals{
+    padding: 0;
+}
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo{
+    width: 100%; /*100 % of parent width */
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--blacktext) ;
+}
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.3s opacity 0.3s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+/*-------------------------------------------------*/
+/* END OF SECTION MEALS */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* SECTION STEPS */
+/*-------------------------------------------------*/
+.section-steps{
+    background-color: var(--whitealternative);
+}
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 1.875rem;
+}
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 4.375rem
+}
+.app-screen{
+    width: 40%;
+}
+.works-step{
+    margin-bottom: 3.125rem;
+}
+.works-step:last-of-type{
+    margin-bottom: 3.5rem;
+}
+.works-step div{
+    color: var(--primary-colour);
+    border: 2px solid var(--primary-colour);
+    display: inline-block;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    padding: 0.3125rem;
+    font-size: 150%;
+    float: left;
+    margin-right: 1.5625rem;
+    vertical-align: middle;
+}
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+
+.btn-app img{
+    height: 2rem;
+    width: auto;
+    margin-right: 0.625rem;
+}
+.btn-app p{
+    vertical-align: middle;
+}
+
+/*-------------------------------------------------*/
+/* END OF SECTION STEPS */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* SECTION CITIES */
+/*-------------------------------------------------*/
+.box img{
+    width: 100%;
+    height: 25vh;
+    margin-bottom:0.9375rem;
+}
+.city-feature{
+    margin-bottom:0.3125rem;
+}
+/*-------------------------------------------------*/
+/* END OF SECTION CITIES */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  SECTION TESTIMONIALS */
+/*-------------------------------------------------*/
+.section-testimonials{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../css/img/bg_5.jpg); ;
+    background-size: cover;
+    background-position: center;
+    color: var(--whitetext);
+    background-attachment: fixed;
+}
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top:2.5rem;
+}
+blockquote::before{
+    content: "\201C";
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: -0.3125rem;
+    left: -0.3125rem;
+    color: var(--primary-colour);
+}
+cite{
+    font-size: 90%;
+    margin-top: 1.5625rem;
+    display: block;
+}
+cite img{
+    height: 2.8125rem;
+    width:2.8125rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    vertical-align: middle;
+
+}
+/*-------------------------------------------------*/
+/*  END OF SECTION TESTIMONIALS */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  SECTION PLANS */
+/*-------------------------------------------------*/
+.section-plans{
+    background-color: var(--whitealternative);
+}
+.plan-box{
+    background-color: var(--whitetext);
+    border-radius: 0.3125rem;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #e3e3e3;
+}
+.plan-box div{
+    padding: 0.9375rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 0.625rem;
+    font-weight: 300;
+    color: var(--primary-colour);
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+.plan-price-meal{
+    font-size: 80%;
+    font-weight: 100;
+}
+.plan-box ul{
+    list-style: none;
+}
+.plan-box ul li{
+    padding: 0.3125rem 0;
+}
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 0.3125rem;
+    border-top-right-radius: 0.3125rem;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+
+
+/*-------------------------------------------------*/
+/*  END OF SECTION PLANS */
+/*-------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
